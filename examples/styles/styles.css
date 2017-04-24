@@ -1,138 +1,67 @@
-body {
-  font-family: monospace;
-  font-size: 18px;
-  background: #111;
-  color: #666;
-  margin: 0;
+body, html, *:not(img) {
+margin:0px;
+padding: 0px;
 }
 
-img {
-  display: block;
-  width: 100%;
+#scene {
+	max-width: 1200px;
+	min-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	height: 760px;
 }
 
-input[type=checkbox] {
-  display: none;
+#scene .layer {
+	position: absolute;
+	text-align: center;
+	top: 0px;
+	left: 0px;
+	transition: all 0.2s ease-out;
+	width: 100%;
+}
+#scene .layer img {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+#scene .layer-1 img {
+	max-width: 521px;
+	margin-left: -74%;
+	margin-top: 143px;
+}
+#scene .layer-2, #scene .layer-4, #scene .layer-3 {
+	text-align: center;
 }
 
-label {
-  display: inline-block;
-  margin-right: 1em;
-  padding: 0.4em 0;
-  cursor: pointer;
+#scene .layer-2 img {
+	max-width: 297px;
+	margin-right: -65%;
+	margin-top: 82px;
+}
+#scene .layer-3 img {
+	max-width: 352px;
+	margin-right: -67%;
+	margin-top: 357px;
+}
+#scene .layer-4 img {
+	max-width: 109px;
+	margin-right: -76%;
+	margin-top: 302px;
 }
 
-button {
-  border: 10px solid #00FFAA;
-  font-family: monospace;
-  position: absolute;
-  line-height: 60px;
-  text-align: right;
-  padding: 0 1.2em;
-  background: #444;
-  font-size: 24px;
-  cursor: pointer;
-  display: block;
-  outline: none;
-  height: 80px;
-  width: 80%;
-  top: 260px;
-  margin: 0;
-  left: 10%;
+#scene .layer-5 {
+	text-align:center;
 }
 
-button:hover {
-  background: #00FFAA;
+#scene .layer-5 img {
+	max-width: 525px;
+	margin-top: 148px;
+	margin-right: -7.9%;
 }
 
-input[type=checkbox] + label:before {
-  display: inline-block;
-  position: relative;
-  background: #444;
-  margin-right: 8px;
-  content: "";
-  height: 16px;
-  width: 16px;
-  top: 1px;
-}
-
-input[type=checkbox]:checked + label:before {
-  background: #00FFAA;
-}
-
-.container {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 5%;
-}
-
-.container--offset {
-  margin-left: 10%;
-}
-
-.scene {
-  padding: 0;
-  margin: 0;
-}
-
-.fill {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  left: 5%;
-  top: 5%;
-}
-
-.expand-width {
-  width: 100%;
-}
-
-.border {
-  border: 2px dashed #00FFAA;
-}
-
-.aspect {
-  opacity: 0.2;
-}
-
-.layer:nth-child(1) {
-  opacity: 0.15;
-}
-.layer:nth-child(1) button {
-  -webkit-transform: rotate(150deg);
-}
-
-.layer:nth-child(2) {
-  opacity: 0.30;
-}
-.layer:nth-child(2) button {
-  -webkit-transform: rotate(120deg);
-}
-
-.layer:nth-child(3) {
-  opacity: 0.45;
-}
-.layer:nth-child(3) button {
-  -webkit-transform: rotate(90deg);
-}
-
-.layer:nth-child(4) {
-  opacity: 0.60;
-}
-.layer:nth-child(4) button {
-  -webkit-transform: rotate(60deg);
-}
-
-.layer:nth-child(5) {
-  opacity: 0.75;
-}
-.layer:nth-child(5) button {
-  -webkit-transform: rotate(30deg);
-}
-
-.layer:nth-child(6) {
-  opacity: 0.90;
-}
-.layer:nth-child(6) button {
+#container {
+	background: url('../../../../dist/images/heros/hero-white-background.jpg');
+	overflow: hidden;
+	height: 760px;
+	width: 100%;
 }

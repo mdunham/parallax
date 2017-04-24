@@ -17,14 +17,13 @@
 <body>
 
 	<div id="container" class="container">
-		<ul id="scene" class="scene">
-			<li class="layer" data-depth="1.00"><img src="images/layer1.png"></li>
-			<li class="layer" data-depth="0.80"><img src="images/layer2.png"></li>
-			<li class="layer" data-depth="0.60"><img src="images/layer3.png"></li>
-			<li class="layer" data-depth="0.40"><img src="images/layer4.png"></li>
-			<li class="layer" data-depth="0.20"><img src="images/layer5.png"></li>
-			<li class="layer" data-depth="0.00"><img src="images/layer6.png"></li>
-		</ul>
+		<ul id="scene">
+      <li class="layer layer-1" data-depth-x="0.12" data-depth-y="0.12"><img src="../../../dist/images/heros/parallax/paralax-home-item-1.png"></li>
+      <li class="layer layer-2" data-depth-x="0.10" data-depth-y="0.09"><img src="../../../dist/images/heros/parallax/paralax-home-item-2.png"></li>
+      <li class="layer layer-3" data-depth-x="0.10" data-depth-y="0.10"><img src="../../../dist/images/heros/parallax/paralax-home-item-3.png"></li>
+      <li class="layer layer-4" data-depth-x="0.03" data-depth-y="0.03"><img src="../../../dist/images/heros/parallax/paralax-home-item-4.png"></li>
+      <li class="layer layer-5" data-depth-x="0.34" data-depth-y="0.28"><img src="../../../dist/images/heros/parallax/paralax-home-item-5.png"></li>
+</ul>
 	</div>
 
 	<!-- Scripts -->
@@ -33,7 +32,16 @@
 
 	// Pretty simple huh?
 	var scene = document.getElementById('scene');
-	var parallax = new Parallax(scene);
+	var parallax = new Parallax(scene, {
+		relativeInput: false,
+		invertX: false,
+		scalarY: 40,
+		scalarX: 40,
+		frictionX: 0.31,
+		frictionY: 0.91,
+		originX: 0.5,
+		originY: 0.1
+	});
 
 	</script>
 
